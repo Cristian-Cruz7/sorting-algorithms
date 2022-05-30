@@ -1,3 +1,5 @@
+const prompt = require('prompt-sync')();
+
 function ascendingOrder(arr) {
   const quicksort = (arr) => {
 
@@ -17,20 +19,24 @@ function ascendingOrder(arr) {
   console.log(quicksort(arr))
 }
 
-function descendingOrder(arr) {
-
-  const bubbleSort = arr => {
-    for (let i = 0; i < arr.length - 1; i++) {
-      for (let j = 0; j < arr.length - 1; j++) {
+const bubbleSort = (arr, order) => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - 1; j++) {
+      if (order === 'asc') {
+        if (arr[j] > arr[j + 1]) {
+          [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        }
+      } else {
         if (arr[j] < arr[j + 1]) {
           [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
         }
+
       }
     }
-    return arr;
-  };
-  console.log(bubbleSort(arr))
-}
+  }
+  return arr;
+};
+
 
 
 const arr = [];
@@ -39,7 +45,9 @@ while (arr.length < 100) {
 }
 
 ascendingOrder(arr);
-descendingOrder(arr);
+const ordenado = bubbleSort(arr, 'des');
+console.log(ordenado);
+
 
 /*
 const dso = (a,b,c) => {}
