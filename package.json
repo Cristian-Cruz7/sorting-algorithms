@@ -1,0 +1,18 @@
+{
+  "name": "sorting-algorithms",
+  "version": "1.0.0",
+  "description": "use of sorting algorithms to organize numbers from smallest to largest",
+  "main": "sorting_algorithms.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sorting_algorithms",
+    "nodejs",
+    "javascript",
+    "npm",
+    "github"
+  ],
+  "author": "Thelp",
+  "license": "MIT"
+}
